@@ -227,7 +227,7 @@ app.get('/api/twitch/follows', (req, res) => {
 const { WebSocketServer } = require('ws');
 const wss = new WebSocketServer({ noServer: true, perMessageDeflate: true });
 
-const server = app.listen(PORT, '127.0.0.1', () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`Tesla Browser Bypass running on http://127.0.0.1:${PORT}`);
   console.log(`Static files served from: ${PUBLIC_DIR}`);
 });
